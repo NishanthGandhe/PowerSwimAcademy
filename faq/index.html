@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerSwim Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0EA5E9',
+              secondary: '#FFD700'
+            },
+            borderRadius: {
+              'none': '0px',
+              'sm': '4px',
+              DEFAULT: '8px',
+              'md': '12px',
+              'lg': '16px',
+              'xl': '20px',
+              '2xl': '24px',
+              '3xl': '32px',
+              'full': '9999px',
+              'button': '8px'
+            }
+          }
+        }
+      };
+    </script>
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="../" class="logo">
+        <img src="../images/logo.jpeg" alt="PowerSwim Logo">
+        <span>PowerSwim Academy</span>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <div class="relative" id="swimLessonsDropdown">
+                <button class="flex items-center text-gray-700 hover:text-primary" onclick="toggleDropdown()"> Swim Lessons <i class="ri-arrow-down-s-line ml-1"></i>
+                </button>
+                <div class="absolute hidden w-48 bg-white shadow-lg rounded-md mt-2 py-2" id="dropdownMenu">
+                  <a href="../location/", class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Find Location</a>
+                  <a href="../programs/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Programs</a>
+                </div>
+              </div>
+          </li>
+          <li><a href="../about/">About Us</a></li>
+          <li><a href="../careers/">Join Our Team</a></li>
+          <li><a href="../faq/">FAQ</a></li>          
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<!-- FAQ Section -->
+<main class="container mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h1>
+    <div class="space-y-6">
+        <div>
+            <h2 class="text-xl font-semibold">1. When will classes begin and end?</h2>
+            <p>We will aim to start May 19th but that may change so check email to stay updated. Each session lasts 2 weeks, and there are classes 3 times a week. Summer season will end around August 7th but we will be having classes year round after that through renting pools. There will be fewer classes after summer season but there will still be classes.</p>
+        </div>
+        <div>
+            <h2 class="text-xl font-semibold">2. How long is each class?</h2>
+            <p>Most likely 45 minutes, but if costs per hour of renting pools change things, it may go down to 30 minutes per class depending on location.</p>
+        </div>
+        <div>
+            <h2 class="text-xl font-semibold">3. What is the price per class?</h2>
+            <p>$8 each for class of 4 students, $10 each for class of 3, $15 each for class of 2, $30 for private class. These prices will change depending on location and timing.</p>
+        </div>
+        <div>
+            <h2 class="text-xl font-semibold">4. Where will classes be taught?</h2>
+            <p>Majority of classes during the summer will take place at the community pools near Gandhi Park/Jefferson Ridge apartments in Las Colinas. There will be classes in Prosper in community pools and rental pools I can find there. Small chance there will be classes in Frisco due to lack of personal contacts in Frisco. Let me know if there are any kids 16+ who would like a high paying summer job. I am looking to hire. They will be personally trained by me.</p>
+        </div>
+        <div>
+            <h2 class="text-xl font-semibold">5. What are class timings?</h2>
+            <p>Will be dependent on the schedules of the teachers. I will ask teachers to give me times they are available to work throughout the week and make time slots from those timings, so I cannot tell right now.</p>
+        </div>
+        <div>
+            <h2 class="text-xl font-semibold">6. What is the student to teacher ratio?</h2>
+            <p>4 students max for every teacher. Most of the classes will be of that ratio.</p>
+        </div>
+        <div>
+            <h2 class="text-xl font-semibold">7. Will the pool be salt or chlorine?</h2>
+            <p>Most will be chlorine. May be salt depending if private pool is rented (will not be happening much over the summer sessions).</p>
+        </div>
+        <div>
+            <h2 class="text-xl font-semibold">8. What do I need to bring?</h2>
+            <p>Bring: Towel, swimsuit (one piece highly recommended), sunscreen, moisturizer (water makes skin dry). Do NOT bring goggles. Students will learn to swim without, in case they prepare for an emergency if they get thrown into water. Only advanced students will wear goggles.</p>
+        </div>
+        <div>
+            <h2 class="text-xl font-semibold">9. Will I (Tanai) be teaching?</h2>
+            <p>No, but I will only hire people I would trust and will train all instructors well. I will be in Cincinnati over the summer for an engineering internship. In the fall I will be at another company in south Texas for an internship. I will be managing this company during the summer and training people before I go off to work.</p>
+        </div>
+        <div>
+            <h2 class="text-xl font-semibold">10. Adult classes and Special Ed classes?</h2>
+            <p>Yes, we teach adult classes. All ages are welcome to swim. Ages 2 and younger will need a parent nearby or in the pool with the instructor. We do teach special ed classes but the classes will be shorter due to the increased effort needed to teach.</p>
+        </div>
+        <div>
+            <h2 class="text-xl font-semibold">11. Answers to other questions</h2>
+            <p>Makeups: There will be makeups but only for certain days we set. If you cannot make that timing you will unfortunately not get that money back. Driving to your home: There will be a small extra cost for instructors who drive to your personal pool to teach. If there is a group of 4 there, that extra cost will be significantly less.</p>
+        </div>
+    </div>
+</main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <img src="https://static.readdy.ai/image/d2968d5dbf4174f560676c4ad4e3d8ad/2262e748f983b1ac64d82d8d005e7c18.jpeg" alt="PowerSwim Logo" class="h-14 mr-3">
+            <a href="../" class="text-3xl font-['Pacifico'] text-white">PowerSwim</a>
+          </div>
+          <p class="text-gray-400">Premier swimming instruction for all ages and skill levels.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="../location/" class="text-gray-400 hover:text-white">Locations</a>
+            </li>
+            <li>
+                <a href="../programs/" class="text-gray-400 hover:text-white">Programs</a>
+              </li>
+            <li>
+              <a href="../about/" class="text-gray-400 hover:text-white">About Us</a>
+            </li>
+            <li>
+              <a href="../careers/" class="text-gray-400 hover:text-white">Join Our Team</a>
+
+            </li>
+            <li>
+              <a href="../faq/" class="text-gray-400 hover:text-white">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Connect With Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="ri-facebook-fill text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="ri-instagram-fill text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="ri-twitter-fill text-2xl"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+          <form action="https://formsubmit.co/lordofnether8@gmail.com" method="POST" enctype="multipart/form-data" class="space-y-4">
+            <input type="email" placeholder="Enter your email" name= "email" class="w-full px-4 py-2 rounded-lg bg-gray-800 border-none text-white placeholder-gray-400">
+            <button type="submit" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition duration-300 w-full cursor-pointer"> Subscribe </button>
+            <input type="hidden" name="_subject" value="Want to join Newsletter">
+            <input type="hidden" name="_captcha" value="false">
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 PowerSwim Academy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="../app.js"></script>
+</html>

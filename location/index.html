@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerSwim Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0EA5E9',
+              secondary: '#FFD700'
+            },
+            borderRadius: {
+              'none': '0px',
+              'sm': '4px',
+              DEFAULT: '8px',
+              'md': '12px',
+              'lg': '16px',
+              'xl': '20px',
+              '2xl': '24px',
+              '3xl': '32px',
+              'full': '9999px',
+              'button': '8px'
+            }
+          }
+        }
+      };
+    </script>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../locationstyle.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="../" class="logo">
+        <img src="../images/logo.jpeg" alt="PowerSwim Logo">
+        <span>PowerSwim Academy</span>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <div class="relative" id="swimLessonsDropdown">
+                <button class="flex items-center text-gray-700 hover:text-primary" onclick="toggleDropdown()"> Swim Lessons <i class="ri-arrow-down-s-line ml-1"></i>
+                </button>
+                <div class="absolute hidden w-48 bg-white shadow-lg rounded-md mt-2 py-2" id="dropdownMenu">
+                  <a href="../location/", class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Find Location</a>
+                  <a href="../programs/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Programs</a>
+                </div>
+              </div>
+          </li>
+          <li><a href="../about/">About Us</a></li>
+          <li><a href="../careers/">Join Our Team</a></li>
+          <li><a href="../faq/">FAQ</a></li>          
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <section class="locations-section">
+        <div class="container">
+            
+            <div class="locations-grid">
+                <!-- Location Card 1 -->
+                <div class="location-card" data-id="1">
+                    <div class="location-image">
+                        <img src="../images/irving.png" alt="Irving Center">
+                    </div>
+                    <div class="location-info">
+                        <h3>Irving Center</h3>
+                        <p class="address">1200 Hidden Ridge, Irving, TX 75063</p>
+                        
+                        <div class="programs">
+                            <span class="program-tag">Baby Turtle</span>
+                            <span class="program-tag">Frog</span>
+                            <span class="program-tag">Sea Otter</span>
+                            <span class="program-tag">Seal</span>
+                            <span class="program-tag">Stingray</span>
+                            <span class="program-tag">Orca</span>
+                        </div>
+                        
+                        <div class="hours">
+                            <i class="far fa-clock"></i>
+                            <span>Open today: 6:00 AM - 9:00 PM</span>
+                        </div>
+                        
+                        <div class="actions">
+                            <button class="btn-secondary view-schedule">View Schedule</button>
+                            <a href="https://tinyurl.com/SwimInterestForm2025", class="btn-primary register">Register</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Location Card 2 -->
+                <div class="location-card" data-id="2">
+                    <div class="location-image">
+                        <img src="../images/coppell.png" alt="Coppell Location">
+                    </div>
+                    <div class="location-info">
+                        <h3>Coppell Center</h3>
+                        <p class="address">Coming Soon</p>
+                        
+                        <div class="programs">
+                            <span class="program-tag">Baby Turtle</span>
+                            <span class="program-tag">Frog</span>
+                            <span class="program-tag">Sea Otter</span>
+                            <span class="program-tag">Seal</span>
+                            <span class="program-tag">Stingray</span>
+                            <span class="program-tag">Orca</span>
+                        </div>
+                        
+                        <div class="hours">
+                            <i class="far fa-clock"></i>
+                            <span>Open today: 7:00 AM - 8:00 PM</span>
+                        </div>
+                        
+                        <div class="actions">
+                            <button class="btn-secondary view-schedule">View Schedule</button>
+                            <a href="https://tinyurl.com/SwimInterestForm2025", class="btn-primary register">Register</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Location Card 3 -->
+                <div class="location-card" data-id="3">
+                    <div class="location-image">
+                        <img src="../images/prosper.png" alt="Prosper Facility">
+                    </div>
+                    <div class="location-info">
+                        <h3>Propser Center</h3>
+                        <p class="address">coming soon</p>
+                        
+                        <div class="programs">
+                            <span class="program-tag">Baby Turtle</span>
+                            <span class="program-tag">Frog</span>
+                            <span class="program-tag">Sea Otter</span>
+                            <span class="program-tag">Seal</span>
+                            <span class="program-tag">Stingray</span>
+                            <span class="program-tag">Orca</span>
+                        </div>
+                        
+                        <div class="hours">
+                            <i class="far fa-clock"></i>
+                            <span>Open today: 6:00 AM - 10:00 PM</span>
+                        </div>
+                        
+                        <div class="actions">
+                            <button class="btn-secondary view-schedule">View Schedule</button>
+                            <a href="https://tinyurl.com/SwimInterestForm2025", class="btn-primary register">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Detail Modal -->
+    <div id="location-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                
+                <div class="hours-of-operation">
+                    <h3>Hours of Operation</h3>
+                    <div class="hours-grid">
+                        <div class="day">Monday</div>
+                        <div class="time">6:00 AM - 9:00 PM</div>
+                        <div class="day">Tuesday</div>
+                        <div class="time">6:00 AM - 9:00 PM</div>
+                        <div class="day">Wednesday</div>
+                        <div class="time">6:00 AM - 9:00 PM</div>
+                        <div class="day">Thursday</div>
+                        <div class="time">6:00 AM - 9:00 PM</div>
+                        <div class="day">Friday</div>
+                        <div class="time">6:00 AM - 9:00 PM</div>
+                        <div class="day">Saturday</div>
+                        <div class="time">8:00 AM - 6:00 PM</div>
+                        <div class="day">Sunday</div>
+                        <div class="time">8:00 AM - 6:00 PM</div>
+                    </div>
+                </div>
+                
+                <div class="available-programs">
+                    <h3>Available Programs</h3>
+                    <div class="program-list">
+                        <div class="program">
+                            <h4>Baby Turle</h4>
+                            <p>No swimming ability necessary</p>
+                        </div>
+                        <div class="program">
+                            <h4>Frog</h4>
+                            <p>Minimal swimming ability, just starting to learn basic skills. Recently comfortable with water</p>
+                        </div>
+                        <div class="program">
+                            <h4>Sea Otter</h4>
+                            <p>Basic swimming skills developed but still lacks confidence and endurance.</p>
+                        </div>
+                        <div class="program">
+                            <h4>Seal</h4>
+                            <p>Moderate swimming proficiency with improved technique and endurance.</p>
+                        </div>
+                        <div class="program">
+                            <h4>Stingray</h4>
+                            <p>High swimming proficiency with strong technique and endurance.</p>
+                        </div>
+                        <div class="program">
+                            <h4>Orca</h4>
+                            <p>Exceptional swimming ability with mastery of techniques, endurance, and safety skills.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button class="btn-secondary" id="back-to-list">Back to Locations</button>
+                    <a href="https://tinyurl.com/SwimInterestForm2025", class="btn-primary modal-actions">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+          <div class="grid md:grid-cols-4 gap-8">
+            <div>
+              <div class="flex items-center mb-4">
+                <img src="https://static.readdy.ai/image/d2968d5dbf4174f560676c4ad4e3d8ad/2262e748f983b1ac64d82d8d005e7c18.jpeg" alt="PowerSwim Logo" class="h-14 mr-3">
+                <a href="../" class="text-3xl font-['Pacifico'] text-white">PowerSwim</a>
+              </div>
+              <p class="text-gray-400">Premier swimming instruction for all ages and skill levels.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="../location/" class="text-gray-400 hover:text-white">Locations</a>
+                </li>
+                <li>
+                    <a href="../programs/" class="text-gray-400 hover:text-white">Programs</a>
+                  </li>
+                <li>
+                  <a href="../about/" class="text-gray-400 hover:text-white">About Us</a>
+                </li>
+                <li>
+                  <a href="../careers/" class="text-gray-400 hover:text-white">Join Our Team</a>
+
+                </li>
+                <li>
+                  <a href="../faq/" class="text-gray-400 hover:text-white">FAQ</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-4">Connect With Us</h3>
+              <div class="flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <i class="ri-facebook-fill text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <i class="ri-instagram-fill text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                  <i class="ri-twitter-fill text-2xl"></i>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+              <form class="space-y-4">
+                <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-lg bg-gray-800 border-none text-white placeholder-gray-400">
+                <button type="submit" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition duration-300 w-full cursor-pointer"> Subscribe </button>
+              </form>
+            </div>
+          </div>
+          <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 PowerSwim Academy. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </body>
+    <script src="../app.js"></script>
+    <script src= "locationcode.js"></script>
+</html>

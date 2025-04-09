@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerSwim Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0EA5E9',
+              secondary: '#FFD700'
+            },
+            borderRadius: {
+              'none': '0px',
+              'sm': '4px',
+              DEFAULT: '8px',
+              'md': '12px',
+              'lg': '16px',
+              'xl': '20px',
+              '2xl': '24px',
+              '3xl': '32px',
+              'full': '9999px',
+              'button': '8px'
+            }
+          }
+        }
+      };
+    </script>
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="/" class="logo">
+        <img src="../images/logo.jpeg" alt="PowerSwim Logo">
+        <span>PowerSwim Academy</span>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <div class="relative" id="swimLessonsDropdown">
+                <button class="flex items-center text-gray-700 hover:text-primary" onclick="toggleDropdown()"> Swim Lessons <i class="ri-arrow-down-s-line ml-1"></i>
+                </button>
+                <div class="absolute hidden w-48 bg-white shadow-lg rounded-md mt-2 py-2" id="dropdownMenu">
+                  <a href="../location/", class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Find Location</a>
+                  <a href="../programs/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Programs</a>
+                </div>
+              </div>
+          </li>
+          <li><a href="../about/">About Us</a></li>
+          <li><a href="../careers/">Join Our Team</a></li>
+          <li><a href="../faq/">FAQ</a></li>          
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- programs-->
+<section class="programs-section py-12 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-primary mb-8">Our Programs</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Program 0 -->
+            <div class="program-card bg-white shadow-lg rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Non-Swimmer (Baby Turtle)</h3>
+                <p class="text-gray-600">No swimming ability at all.</p>
+                <ul class="text-gray-600 list-disc pl-5">
+                    <li>Cannot float or tread water independently.</li>
+                    <li>Afraid of or uncomfortable in water deeper than standing height.</li>
+                    <li>Requires full assistance or flotation devices to stay afloat.</li>
+                    <li>No experience with swimming strokes.</li>
+                </ul>
+            </div>
+            <!-- Program 1 -->
+            <div class="program-card bg-white shadow-lg rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Beginner (Frog)</h3>
+                <p class="text-gray-600">Minimal swimming ability, just starting to learn basic skills. Decently comfortable with water.</p>
+                <ul class="text-gray-600 list-disc pl-5">
+                    <li>Can enter the water and submerge face briefly.</li>
+                    <li>Can float on back or stomach with assistance or minimal support.</li>
+                    <li>Limited ability to propel forward (e.g., doggy paddle) for short distances (less than 5 meters).</li>
+                    <li>May struggle with breathing control while in water.</li>
+                </ul>
+            </div>
+            <!-- Program 2 -->
+            <div class="program-card bg-white shadow-lg rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Advanced Beginner (Sea Otter)</h3>
+                <p class="text-gray-600">Basic swimming skills developed but still lacks confidence and endurance.</p>
+                <ul class="text-gray-600 list-disc pl-5">
+                    <li>Can float and tread water independently for up to 30 seconds.</li>
+                    <li>Can swim basic strokes (e.g., front crawl or breaststroke) for short distances (5–10 meters).</li>
+                    <li>Beginning to coordinate breathing with strokes but inconsistent.</li>
+                    <li>Comfortable in shallow water but hesitant in deeper areas.</li>
+                </ul>
+            </div>
+            <!-- Program 3 -->
+            <div class="program-card bg-white shadow-lg rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Intermediate (Seal)</h3>
+                <p class="text-gray-600">Moderate swimming proficiency with improved technique and endurance.</p>
+                <ul class="text-gray-600 list-disc pl-5">
+                    <li>Can swim confidently using basic strokes (front crawl, breaststroke) for longer distances (10–25 meters).</li>
+                    <li>Demonstrates controlled breathing while swimming.</li>
+                    <li>Comfortable in deeper water but may avoid open water scenarios.</li>
+                </ul>
+            </div>
+            <!-- Program 4 -->
+            <div class="program-card bg-white shadow-lg rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Advanced (Stingray)</h3>
+                <p class="text-gray-600">High swimming proficiency with strong technique and endurance.</p>
+                <ul class="text-gray-600 list-disc pl-5">
+                    <li>Can swim multiple strokes (front crawl, backstroke, breaststroke) proficiently for extended distances (50–100 meters).</li>
+                    <li>Comfortable in deep and open water environments.</li>
+                    <li>Demonstrates efficient breathing techniques and stroke coordination.</li>
+                </ul>
+            </div>
+            <!-- Program 5 -->
+            <div class="program-card bg-white shadow-lg rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Expert (Orca)</h3>
+                <p class="text-gray-600">Exceptional swimming ability with mastery of techniques, endurance, and safety skills.</p>
+                <ul class="text-gray-600 list-disc pl-5">
+                    <li>Can swim long distances (over 100 meters) using multiple strokes efficiently.</li>
+                    <li>Here to learn advanced swimming techniques and work on speed/endurance.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <img src="https://static.readdy.ai/image/d2968d5dbf4174f560676c4ad4e3d8ad/2262e748f983b1ac64d82d8d005e7c18.jpeg" alt="PowerSwim Logo" class="h-14 mr-3">
+            <a href="../" class="text-3xl font-['Pacifico'] text-white">PowerSwim</a>
+          </div>
+          <p class="text-gray-400">Premier swimming instruction for all ages and skill levels.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="../location/" class="text-gray-400 hover:text-white">Locations</a>
+            </li>
+            <li>
+                <a href="../programs/" class="text-gray-400 hover:text-white">Programs</a>
+              </li>
+            <li>
+              <a href="../about/" class="text-gray-400 hover:text-white">About Us</a>
+            </li>
+            <li>
+              <a href="../careers/" class="text-gray-400 hover:text-white">Join Our Team</a>
+
+            </li>
+            <li>
+              <a href="../faq/" class="text-gray-400 hover:text-white">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Connect With Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="ri-facebook-fill text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="ri-instagram-fill text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="ri-twitter-fill text-2xl"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+          <form action="https://formsubmit.co/lordofnether8@gmail.com" method="POST" enctype="multipart/form-data" class="space-y-4">
+            <input type="email" placeholder="Enter your email" name= "email" class="w-full px-4 py-2 rounded-lg bg-gray-800 border-none text-white placeholder-gray-400">
+            <button type="submit" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition duration-300 w-full cursor-pointer"> Subscribe </button>
+            <input type="hidden" name="_subject" value="Want to join Newsletter">
+            <input type="hidden" name="_captcha" value="false">
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 PowerSwim Academy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="../app.js"></script>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerSwim Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0EA5E9',
+              secondary: '#FFD700'
+            },
+            borderRadius: {
+              'none': '0px',
+              'sm': '4px',
+              DEFAULT: '8px',
+              'md': '12px',
+              'lg': '16px',
+              'xl': '20px',
+              '2xl': '24px',
+              '3xl': '32px',
+              'full': '9999px',
+              'button': '8px'
+            }
+          }
+        }
+      };
+    </script>
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="/" class="logo">
+        <img src="../images/logo.jpeg" alt="PowerSwim Logo">
+        <span>PowerSwim Academy</span>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <div class="relative" id="swimLessonsDropdown">
+                <button class="flex items-center text-gray-700 hover:text-primary" onclick="toggleDropdown()"> Swim Lessons <i class="ri-arrow-down-s-line ml-1"></i>
+                </button>
+                <div class="absolute hidden w-48 bg-white shadow-lg rounded-md mt-2 py-2" id="dropdownMenu">
+                  <a href="../location/", class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Find Location</a>
+                  <a href="../programs/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Programs</a>
+                </div>
+              </div>
+          </li>
+          <li><a href="../about/">About Us</a></li>
+          <li><a href="../careers/">Join Our Team</a></li>
+          <li><a href="../faq/">FAQ</a></li>          
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<main class="bg-gray-50 py-16">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800">Join Our Team</h1>
+            <p class="text-gray-600 mt-4">Be part of a passionate team dedicated to teaching swimming and making a difference in people's lives.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Why Work With Us?</h2>
+                <ul class="space-y-4 text-gray-600">
+                    <li class="flex items-start">
+                        <i class="ri-check-line text-primary text-xl mr-3"></i>
+                        Competitive pay and benefits.
+                    </li>
+                    <li class="flex items-start">
+                        <i class="ri-check-line text-primary text-xl mr-3"></i>
+                        Opportunities for growth and development.
+                    </li>
+                    <li class="flex items-start">
+                        <i class="ri-check-line text-primary text-xl mr-3"></i>
+                        A supportive and fun work environment.
+                    </li>
+                    <li class="flex items-start">
+                        <i class="ri-check-line text-primary text-xl mr-3"></i>
+                        Make a meaningful impact in the community.
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <img src="../images/join.png" alt="Join Our Team" class="rounded-lg shadow-lg">
+            </div>
+        </div>
+        <div class="mt-16">
+            <h2 class="text-2xl font-bold text-gray-800 text-center mb-8">Apply Now</h2>
+            <form action="https://formsubmit.co/lordofnether8@gmail.com" method="POST" enctype="multipart/form-data" class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-6 careerForm">
+                <div>
+                    <label for="name" class="block text-gray-700 font-medium">Full Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your full name" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700 font-medium">Email Address</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your email" required>
+                </div>
+                <div>
+                    <label for="phone" class="block text-gray-700 font-medium">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your phone number" required>
+                </div>
+                <div>
+                    <label for="resume" class="block text-gray-700 font-medium">Upload Resume</label>
+                    <input type="file" id="resume" name="attachment" accept="pdf" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-700 font-medium">Why do you want to join us?</label>
+                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Tell us why you're a great fit" required></textarea>
+                </div>
+                <button type="submit" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition duration-300 w-full">Submit Application</button>
+                <input type="hidden" name="_subject" value="Job Application *Important">
+                <input type="hidden" name="_captcha" value="false">
+                <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5500//careers/"> -->
+            </form>
+        </div>
+    </div>
+</main>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <img src="https://static.readdy.ai/image/d2968d5dbf4174f560676c4ad4e3d8ad/2262e748f983b1ac64d82d8d005e7c18.jpeg" alt="PowerSwim Logo" class="h-14 mr-3">
+            <a href="/" class="text-3xl font-['Pacifico'] text-white">PowerSwim</a>
+          </div>
+          <p class="text-gray-400">Premier swimming instruction for all ages and skill levels.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="../location/" class="text-gray-400 hover:text-white">Locations</a>
+            </li>
+            <li>
+                <a href="../programs/" class="text-gray-400 hover:text-white">Programs</a>
+              </li>
+            <li>
+              <a href="../about/" class="text-gray-400 hover:text-white">About Us</a>
+            </li>
+            <li>
+              <a href="../careers/" class="text-gray-400 hover:text-white">Join Our Team</a>
+
+            </li>
+            <li>
+              <a href="../faq/" class="text-gray-400 hover:text-white">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Connect With Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="ri-facebook-fill text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="ri-instagram-fill text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="ri-twitter-fill text-2xl"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+          <form action="https://formsubmit.co/lordofnether8@gmail.com" method="POST" enctype="multipart/form-data" class="space-y-4">
+            <input type="email" placeholder="Enter your email" name= "email" class="w-full px-4 py-2 rounded-lg bg-gray-800 border-none text-white placeholder-gray-400">
+            <button type="submit" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition duration-300 w-full cursor-pointer"> Subscribe </button>
+            <input type="hidden" name="_subject" value="Want to join Newsletter">
+            <input type="hidden" name="_captcha" value="false">
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 PowerSwim Academy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="../app.js"></script>
+</html>
