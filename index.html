@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaSkills Academy - Premier Swimming Lessons</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0EA5E9',
+                        secondary: '#38BDF8'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        .location-card:hover { transform: translateY(-4px); }
+        .testimonial-slider { scroll-behavior: smooth; }
+        .scroll-hidden::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-white">
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="#" class="text-3xl font-['Pacifico'] text-primary">logo</a>
+                    <div class="hidden md:flex items-center ml-16 space-x-8">
+                        <div class="relative group">
+                            <button class="flex items-center text-gray-700 hover:text-primary">
+                                Swim Lessons
+                                <i class="ri-arrow-down-s-line ml-1"></i>
+                            </button>
+                            <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-md mt-2 py-2">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Find Location</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Level Finder</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Programs</a>
+                            </div>
+                        </div>
+                        <a href="#" class="text-gray-700 hover:text-primary">About Us</a>
+                        <a href="#" class="text-gray-700 hover:text-primary">Join Our Team</a>
+                        <a href="#" class="text-gray-700 hover:text-primary">FAQ</a>
+                        <a href="#" class="text-gray-700 hover:text-primary">Contact</a>
+                    </div>
+                </div>
+                <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition duration-300 cursor-pointer whitespace-nowrap">
+                    Book Now
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <section class="relative h-[600px] bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/899de7d76ab2c73e7af27ebfa137509b.jpg')">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="container mx-auto px-6 relative h-full flex items-center">
+                <div class="max-w-2xl text-white">
+                    <h1 class="text-5xl font-bold mb-6">Learn to Swim with Confidence</h1>
+                    <p class="text-xl mb-8">Expert instruction for all ages and skill levels. Join thousands of successful swimmers who started their journey with us.</p>
+                    <div class="flex space-x-4">
+                        <button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-secondary transition duration-300 cursor-pointer">
+                            Find Your Location
+                        </button>
+                        <button class="bg-white text-primary px-8 py-3 !rounded-button hover:bg-gray-100 transition duration-300 cursor-pointer">
+                            Level Finder
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Our Locations</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="location-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 cursor-pointer">
+                        <img src="https://public.readdy.ai/ai/img_res/75770ab34e2d79dda879e83fc0ed14f8.jpg" alt="Downtown Facility" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Downtown Facility</h3>
+                            <p class="text-gray-600 mb-4">123 Main Street, City Center</p>
+                            <p class="text-gray-700 mb-4">State-of-the-art facility with Olympic-sized pool and expert instructors.</p>
+                            <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition duration-300 w-full">
+                                View Schedule
+                            </button>
+                        </div>
+                    </div>
+                    <div class="location-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 cursor-pointer">
+                        <img src="https://public.readdy.ai/ai/img_res/fb17c8b33f290447542c460d24a1fd8e.jpg" alt="Westside Location" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Westside Location</h3>
+                            <p class="text-gray-600 mb-4">456 West Avenue, Westside</p>
+                            <p class="text-gray-700 mb-4">Family-friendly facility with dedicated children's pool and adult lanes.</p>
+                            <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition duration-300 w-full">
+                                View Schedule
+                            </button>
+                        </div>
+                    </div>
+                    <div class="location-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 cursor-pointer">
+                        <img src="https://public.readdy.ai/ai/img_res/9459c2c6290dbf07423daa3af5d45a21.jpg" alt="Eastside Branch" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Eastside Branch</h3>
+                            <p class="text-gray-600 mb-4">789 East Road, Eastside</p>
+                            <p class="text-gray-700 mb-4">Modern facility featuring heated pools and specialized training programs.</p>
+                            <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition duration-300 w-full">
+                                View Schedule
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Our Programs</h2>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-baby-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Parent & Tot</h3>
+                        <p class="text-gray-600 mb-2">Ages: 6-36 months</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>Water adjustment</li>
+                            <li>Basic movements</li>
+                            <li>Safety skills</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-user-smile-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Preschool</h3>
+                        <p class="text-gray-600 mb-2">Ages: 3-5 years</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>Water confidence</li>
+                            <li>Basic strokes</li>
+                            <li>Floating techniques</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-team-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">School Age</h3>
+                        <p class="text-gray-600 mb-2">Ages: 6-12 years</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>Stroke development</li>
+                            <li>Endurance building</li>
+                            <li>Advanced techniques</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-user-star-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Adult Programs</h3>
+                        <p class="text-gray-600 mb-2">Ages: 13+</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>Customized lessons</li>
+                            <li>Fitness swimming</li>
+                            <li>Technique refinement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Meet Our Instructors</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/d4bc2eba5b0fdf90df60ca4106bea29d.jpg" alt="Sarah Anderson" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Sarah Anderson</h3>
+                            <p class="text-gray-600 mb-2">Head Coach</p>
+                            <p class="text-gray-700 mb-4">15+ years experience, Olympic trainer</p>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/848944f64e8e1a6f339f19802c696f0b.jpg" alt="Michael Chen" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Michael Chen</h3>
+                            <p class="text-gray-600 mb-2">Youth Program Director</p>
+                            <p class="text-gray-700 mb-4">10+ years experience, Child Development Specialist</p>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/606aa038548ec09349e8b8a8616e653b.jpg" alt="Emma Thompson" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Emma Thompson</h3>
+                            <p class="text-gray-600 mb-2">Adult Program Specialist</p>
+                            <p class="text-gray-700 mb-4">8+ years experience, Fitness Expert</p>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">What Our Students Say</h2>
+                <div class="relative">
+                    <div class="testimonial-slider flex overflow-x-auto scroll-hidden gap-6">
+                        <div class="min-w-[350px] bg-white rounded-lg shadow-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <img src="https://public.readdy.ai/ai/img_res/e5a4671972648a6552b1d0da908db584.jpg" alt="Jennifer Wilson" class="w-12 h-12 rounded-full object-cover">
+                                <div class="ml-4">
+                                    <h4 class="font-bold">Jennifer Wilson</h4>
+                                    <div class="flex text-yellow-400">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-700">"Amazing experience! My daughter went from being afraid of water to swimming confidently in just a few months. The instructors are patient and professional."</p>
+                        </div>
+
+                        <div class="min-w-[350px] bg-white rounded-lg shadow-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <img src="https://public.readdy.ai/ai/img_res/c5e3c0af61cdee8b6da7e3f4afc719ce.jpg" alt="Robert Martinez" class="w-12 h-12 rounded-full object-cover">
+                                <div class="ml-4">
+                                    <h4 class="font-bold">Robert Martinez</h4>
+                                    <div class="flex text-yellow-400">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-700">"As an adult learner, I was nervous about taking swimming lessons. The instructors made me feel comfortable and helped me achieve my goals."</p>
+                        </div>
+
+                        <div class="min-w-[350px] bg-white rounded-lg shadow-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <img src="https://public.readdy.ai/ai/img_res/71eedd188e800df0dac0f2fff4d19e14.jpg" alt="Emily Parker" class="w-12 h-12 rounded-full object-cover">
+                                <div class="ml-4">
+                                    <h4 class="font-bold">Emily Parker</h4>
+                                    <div class="flex text-yellow-400">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-700">"The facility is clean and well-maintained. The instructors are knowledgeable and make learning fun. My kids love coming here!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="name">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 rounded-lg border-gray-300 focus:border-primary focus:ring-primary" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="email">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 rounded-lg border-gray-300 focus:border-primary focus:ring-primary" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="phone">Phone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 rounded-lg border-gray-300 focus:border-primary focus:ring-primary" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="message">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg border-gray-300 focus:border-primary focus:ring-primary" required></textarea>
+                            </div>
+                            <button type="submit" class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-secondary transition duration-300 w-full cursor-pointer">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                    <div>
+                        <div class="h-64 mb-6 rounded-lg overflow-hidden">
+                            <img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Location Map" class="w-full h-full object-cover">
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="ri-map-pin-line text-primary text-xl w-8"></i>
+                                <span class="text-gray-700">123 Swimming Lane, Aqua City, AC 12345</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="ri-phone-line text-primary text-xl w-8"></i>
+                                <span class="text-gray-700">(555) 123-4567</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="ri-mail-line text-primary text-xl w-8"></i>
+                                <span class="text-gray-700">info@aquaskills.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="ri-time-line text-primary text-xl w-8"></i>
+                                <div class="text-gray-700">
+                                    <p>Monday - Friday: 6:00 AM - 9:00 PM</p>
+                                    <p>Saturday - Sunday: 8:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="text-3xl font-['Pacifico'] text-white mb-4 block">logo</a>
+                    <p class="text-gray-400">Premier swimming instruction for all ages and skill levels.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Swim Lessons</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Join Our Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="ri-facebook-fill text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="ri-instagram-fill text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="ri-twitter-fill text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-lg bg-gray-800 border-none text-white placeholder-gray-400">
+                        <button type="submit" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition duration-300 w-full cursor-pointer">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 AquaSkills Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData);
+                console.log('Form submitted:', data);
+                
+                const successMessage = document.createElement('div');
+                successMessage.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg';
+                successMessage.textContent = 'Message sent successfully!';
+                document.body.appendChild(successMessage);
+                
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 3000);
+                
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
