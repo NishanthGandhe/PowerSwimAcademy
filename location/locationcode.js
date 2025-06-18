@@ -42,92 +42,6 @@ const locations = [
                 description: "Exceptional swimming ability with mastery of techniques, endurance, and safety skills.",
             }
         ],
-    },
-    {
-        id: 2,
-        name: "Coppell Location",
-        address: "Coming Soon",
-        city: "Coppell",
-        state: "TX",
-        zip: "75019",
-        hours: {
-            Monday: "7:00 AM - 8:00 PM",
-            Tuesday: "7:00 AM - 8:00 PM",
-            Wednesday: "7:00 AM - 8:00 PM",
-            Thursday: "7:00 AM - 8:00 PM",
-            Friday: "7:00 AM - 8:00 PM",
-            Saturday: "8:00 AM - 6:00 PM",
-            Sunday: "8:00 AM - 6:00 PM"
-        },
-        programs: [
-            {
-                name: "Baby Turtle",
-                description: "No swimming ability necessary",
-            },
-            {
-                name: "Frog",
-                description: "Minimal swimming ability, just starting to learn basic skills. Recently comfortable with water",
-            },
-            {
-                name: "Sea Otter",
-                description: "Basic swimming skills developed but still lacks confidence and endurance.",
-            },
-            {
-                name: "Seal",
-                description: "Moderate swimming proficiency with improved technique and endurance.",
-            },
-            {
-                name: "Stingray",
-                description: "High swimming proficiency with strong technique and endurance.",
-            },
-            {
-                name: "Orca",
-                description: "Exceptional swimming ability with mastery of techniques, endurance, and safety skills.",
-            }
-        ],
-    },
-    {
-        id: 3,
-        name: "Prosper Location",
-        address: "Coming Soon",
-        city: "Prosper",
-        state: "TX",
-        zip: "75033",
-        hours: {
-            Monday: "6:00 AM - 10:00 PM",
-            Tuesday: "6:00 AM - 10:00 PM",
-            Wednesday: "6:00 AM - 10:00 PM",
-            Thursday: "6:00 AM - 10:00 PM",
-            Friday: "6:00 AM - 10:00 PM",
-            Saturday: "8:00 AM - 8:00 PM",
-            Sunday: "8:00 AM - 8:00 PM"
-        },
-        programs: [
-            {
-                name: "Baby Turtle",
-                description: "No swimming ability necessary",
-            },
-            {
-                name: "Frog",
-                description: "Minimal swimming ability, just starting to learn basic skills. Recently comfortable with water",
-            },
-            {
-                name: "Sea Otter",
-                description: "Basic swimming skills developed but still lacks confidence and endurance.",
-            },
-            {
-                name: "Seal",
-                description: "Moderate swimming proficiency with improved technique and endurance.",
-            },
-            {
-                name: "Stingray",
-                description: "High swimming proficiency with strong technique and endurance.",
-            },
-            {
-                name: "Orca",
-                description: "Exceptional swimming ability with mastery of techniques, endurance, and safety skills.",
-            }
-        ],
     }
 ];
 
@@ -192,7 +106,7 @@ function openLocationModal(locationId) {
     const location = locations.find(loc => loc.id === locationId);
     
     if (!location) {
-        alert('Location not found');
+        alert('Location Coming Soon!');
         return;
     }
             
